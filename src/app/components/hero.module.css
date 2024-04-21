@@ -1,0 +1,40 @@
+.jellyImage {
+    display: block;
+    border: whitesmoke 4px solid;
+    height: auto;
+    border-radius: 50%; /* Make the border circular */
+    animation: blob-animation 18s forwards ease-in-out infinite; /* Apply animation with forwards fill mode */
+  }
+  
+  @keyframes blob-animation {
+    0% {
+      border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+      border-color: white;
+    
+    }
+    25% {
+      border-radius: 60% 40% 70% 30% / 50% 80% 60% 20%;
+      border-color: #252424;
+    
+    }
+    50% {
+      border-radius: 40% 60% 50% 30% / 60% 40% 50% 70%;
+      border-color: rgb(71, 68, 68);
+      
+    }
+    75% {
+      border-radius: 70% 30% 60% 40% / 80% 50% 40% 20%;
+      border-color: rgb(244, 243, 240);
+    }
+    100% {
+      border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+      border-color: white;
+    }
+  }
+
+  .smoke:hover {
+    filter: drop-shadow(10px 1px 15px  rgb(13, 0, 252));
+   
+  }
+  
+  
