@@ -59,29 +59,31 @@ export const Hero: React.FC = () => {
           />
         </div>
       </main>
-      <section className="flex justify-center items-center justify-items-end gap-10 mt-20 self-start pl-14 h-[5rem] ">
-        <h1 className="lg:border-r-2 h-[3rem] text-center pr-5 mb-7 border-gray-500 ">
+      <section className="flex lg:flex-row flex-col justify-center items-center justify-items-end lg:gap-10   mt-20 self-start pl-14 ">
+        <h1 className="lg:border-r-2 border-b-2 lg:-mt-3   lg:border-b-0  md:border-b-2  lg:pr-5 mb-7 flex justify-center items-center border-gray-500 w-5/12 lg:w-3/12">
           
           Tech stack
         </h1>
-        <div className="hover:mb-10 hover:duration-500 ease-in-out  h-[5rem] flex items-baseline">
-          <Image  src={htmlCss} priority alt="icons of html and css" />
-        </div>
-        <div  className="hover:mb-10 hover:duration-500 ease-in-out h-[5rem] flex items-baseline">
-          <Image   src={jsTs} priority alt="icons of html and css" />
-        </div>
-        <div className="hover:mb-10 hover:duration-500 ease-in-out h-[5rem] flex items-baseline">
-          <Image   src={reactNext} priority alt="icons of html and css" />
-        </div>
-        <div  className="hover:mb-10 hover:duration-500 ease-in-out h-[5rem] flex items-baseline">
-          <Image   src={tailwindSass} priority alt="icons of html and css" />
-        </div>
-        <div  className="hover:mb-10 hover:duration-500 ease-in-out h-[5rem] flex items-baseline">
-          <Image   src={appwrite} height={80} className="-mt-3" priority alt="icons of html and css" />
-        </div> 
-        <div  className="hover:mb-10 hover:duration-500 ease-in-out h-[5rem] flex items-baseline">
-          <Image   src={mongodb} height={69} className="-mt-3" priority alt="icons of html and css" />
-        </div>
+        <main className="flex flex-wrap lg:flex-nowrap md:flex-row md:w-5/12 lg:w-full gap-5 justify-center items-center">
+          <div className="hover:animate-bounce  h-[5rem] flex items-baseline">
+            <Image  src={htmlCss} priority alt="icons of html and css" />
+          </div>
+          <div  className="hover:animate-bounce h-[5rem] flex items-baseline">
+            <Image   src={jsTs} priority alt="icons of html and css" />
+          </div>
+          <div className="hover:animate-bounce h-[5rem] flex items-baseline">
+            <Image   src={reactNext} priority alt="icons of html and css" />
+          </div>
+          <div  className="hover:animate-bounce h-[5rem] flex items-baseline">
+            <Image   src={tailwindSass} priority alt="icons of html and css" />
+          </div>
+          <div  className="hover:animate-bounce h-[5rem] flex items-baseline">
+            <Image   src={appwrite} height={80} className="-mt-3" priority alt="icons of html and css" />
+          </div> 
+          <div  className="hover:animate-bounce h-[5rem] flex items-baseline">
+            <Image   src={mongodb} height={69} className="-mt-3" priority alt="icons of html and css" />
+          </div>
+        </main>
       </section>
     </>
   );
