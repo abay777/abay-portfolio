@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import sqaure from "@/../../public/darkModeDevSymbol.avif";
+import sqaure from "../../public/darkModeDevSymbol.avif";
 import circle from "@/../../public/web-developer-circle.svg";
 import devIcon from "@/../../public/dev icon.png";
 import { Mulish } from "next/font/google";
@@ -44,9 +44,10 @@ export const About: React.FC = () => {
         <h1 className="text-blue-600 font-bold text-xl  text-center  md:text-justify">About Me</h1>
         <h2 className="text-xl font-bold w-8/12 text-center md:text-justify mx-auto md:mx-0"> Front-end React Developer based in kerala, India. 📍</h2>
         <p className={`text-gray-600 ${mulish.className} mx-auto  md:mx-0  text-center md:text-justify w-10/12 `}> Hey, my name is Abay, and I&apos;m a Frontend Developer. My passion is to create and develop a clean UI/UX for my users.</p>
-        <p className={`text-gray-600 ${mulish.className} mx-auto md:mx-0 text-center md:text-justify w-10/12 `} >
+        <p className={`text-gray-600 ${mulish.className} mx-auto md:mx-0 text-center md:text-left w-10/12 `} >
           Current Tech Stack is Next js/React js with server side rendering
           experience incorporated with TypeScript,Tailwind
+          
           <br />
           hands on experience with Appwrite , MongoDB
         </p>

@@ -1,14 +1,12 @@
 'use client'
 
 import Image from "next/image";
-import { Header, Home1 } from "./components";
+import { Header, Home1 } from "../components";
 
 export default function Home() {
   return (
     <main >
-      <Header/>
-      <Home1/>
-    
+      <Home1/>  
     </main>
   );
 }

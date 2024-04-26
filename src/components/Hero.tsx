@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import wave from "../../../public/waving hand.png";
-import abay from "../../../public/abay with bgs.jpg";
+import wave from "@/../../public/waving hand.png";
+import abay from "@/../../public/abay with bgs.jpg";
 import css from "./hero.module.css";
 import { FiGithub } from "react-icons/fi";
 import { RiLinkedinBoxLine } from "react-icons/ri";
 import { Mulish } from "next/font/google";
-import htmlCss from "../../../public/htmlcssIcon.svg";
+import htmlCss from '@/../../public/htmlcssIcon.svg';
 import jsTs from "@/../../public/jsandtsicons.svg";
 import reactNext from "@../../../public/reactandnextIcon.svg";
 import tailwindSass from "@../../../public/tailwind and sass.svg";
@@ -59,12 +59,12 @@ export const Hero: React.FC = () => {
           />
         </div>
       </main>
-      <section className="flex lg:flex-row flex-col justify-center items-center justify-items-end lg:gap-10   mt-20 self-start pl-14 ">
+      <section className="flex lg:flex-row flex-col justify-center items-center   md:justify-items-start lg:gap-10   mt-20 self-start md:p-14 pl-5">
         <h1 className="lg:border-r-2 border-b-2 lg:-mt-3   lg:border-b-0  md:border-b-2  lg:pr-5 mb-7 flex justify-center items-center border-gray-500 w-5/12 lg:w-3/12">
           
           Tech stack
         </h1>
-        <main className="flex flex-wrap lg:flex-nowrap md:flex-row md:w-5/12 lg:w-full gap-5 justify-center items-center">
+        <main className="flex flex-wrap lg:flex-nowrap md:flex-row md:w-5/12 lg:w-full gap-5  md:justify-center justify-normal items-center">
           <div className="hover:animate-bounce  h-[5rem] flex items-baseline">
             <Image  src={htmlCss} priority alt="icons of html and css" />
           </div>

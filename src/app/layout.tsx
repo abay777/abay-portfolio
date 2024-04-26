@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Poppins } from "next/font/google";
+import { Header } from "../components";
 
 const Poppinss = Poppins({ 
   subsets: ["latin"],
@@ -21,7 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${Poppinss.className }`}>{children}</body>
+      <body className={`${Poppinss.className }`}>
+        <Header/>
+        {children}
+        </body>
     </html>
   );
 }
