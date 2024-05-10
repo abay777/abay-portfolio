@@ -79,14 +79,21 @@ export const AdminForm: React.FC = () => {
         // }else{
         //   throw Error(response)
         // }
+        const req = Object.fromEntries(reqForm)
+        console.log(req,'this reqobj')
+        const reqobj:CreateDB = {
+          projectTitle: req.projectTitle as string,
+          projectDescription: req.projectDescription as string,
+          projectLink: req.projectLink as string
+        }
   
-          
-          const responseData = await axios.post('api/admin',reqForm)
-          if(responseData.data){
-           return toast.success('successfully submitted')
+        
+          const responseData = await appwriteDbServices.createDb(reqobj)
+          if(responseData){
+           return toast.success(responseData.projectTitle)
           }else{
-           console.log(responseData.statusText)
-           throw Error('error in form submission '+ responseData.statusText)
+           console.log(responseData)
+           throw Error('error in form submission ')
           }
         
   

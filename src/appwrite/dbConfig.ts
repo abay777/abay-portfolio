@@ -1,4 +1,4 @@
-import {  Databases, ID, Models } from "appwrite";
+import {  Databases, ID, Models,Query } from "appwrite";
 import conf from "@/config/conf";
 import { client } from "./config";
 export interface CreateDB {
@@ -36,6 +36,22 @@ class AppwriteDbServices {
         throw Error(error.message)
         
     }
+  }
+  async getData (){
+    try {
+        const data = await databases.listDocuments(
+         conf.appwriteDB_Id,
+         conf.appwriteCollection_Id,
+        [
+          
+        ]
+      )
+      return data
+    } catch (error:any) {
+      throw Error(error.message)
+      
+    }
+
   }
 }
 

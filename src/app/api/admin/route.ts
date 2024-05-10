@@ -1,22 +1,23 @@
 import { CreateDB } from "@/appwrite/dbConfig";
+import { appwriteDbServices } from "@/appwrite/dbConfig";
 import { NextResponse, NextRequest } from "next/server";
 
 export async function POST(request: NextRequest) {
   try {
     const reqBody = await request.json() as any;
+    delete reqBody.projectPicture;
     console.log(reqBody);
-    
+
 
     
 
-    // const response = await appwriteDbServices.createDb(filledForm)
-    // if (response!=undefined ) {
-    //   toast.success( response.projectTitle)
-    // }
+  
+   
 
     return NextResponse.json({
-      message: "recieved succefully",
+      message: 'success',
       success: true,
+      
     });
   } catch (error: any) {
     NextResponse.json(
