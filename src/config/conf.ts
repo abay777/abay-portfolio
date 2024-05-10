@@ -5,7 +5,12 @@
 //     appwriteProject:string;
 // }
 
- export const conf = {
-    appwriteURl:process.env.APPWRITEURL,
-    appwriteProject:process.env.APPWRITEID
+  const conf = {
+    appwriteURl:String(process.env.NEXT_PUBLIC_APPWRITE_URL),
+    appwriteProject:String(process.env.NEXT_PUBLIC_APPWRITE_PROJECT_ID),
+    appwriteDB_Id:String(process.env.NEXT_PUBLIC_APPWRITE_DB_PROJECT_ID),
+    appwriteCollection_Id:String(process.env.NEXT_PUBLIC_APPWRITE_COLLECTION_ID)
 }
+
+
+export default conf
