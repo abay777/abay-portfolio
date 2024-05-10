@@ -9,9 +9,9 @@ import { Signup } from "@/components/Signup";
 
  const SignupPage = () => {
   const router = useRouter();
-  const {auth}= useAuth();
+  const {authStatus}= useAuth();
 
-  if(auth){
+  if(authStatus){
    return router.push('/login')
   } 
 

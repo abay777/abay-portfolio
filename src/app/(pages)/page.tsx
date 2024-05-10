@@ -6,12 +6,12 @@ import { useRouter } from "next/navigation";
 
 
 const Home = () => {
-  const {auth} = useAuth()
+  const {authStatus} = useAuth()
   console.log(appwriteService.getCurrentUser())
   return (
     <>
         {
-          auth ?( 
+          authStatus ?( 
           <div>
             <div className="font-extrabold text-xl">Admin is present</div>
              <Home1/>

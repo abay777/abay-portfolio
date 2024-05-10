@@ -14,7 +14,7 @@ const Logoutpage = () => {
             setAuthStatus(false)
             router.replace('/login')
         })
-    },[])
+    },)
   return (
     <>
     </>
