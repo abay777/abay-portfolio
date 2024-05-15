@@ -15,7 +15,9 @@ type LoginUser = {
 };
 export const client = new Client();
 
-const result = client.setEndpoint(conf.appwriteURl).setProject(conf.appwriteProject); // Replace with your project ID
+const result = client
+  .setEndpoint(conf.appwriteURl)
+  .setProject(conf.appwriteProject); // Replace with your project ID
 export const account = new Account(client);
 export { ID } from "appwrite";
 
@@ -50,36 +52,27 @@ class AppwriteService {
 
   async logout() {
     try {
-        return await account.deleteSession('current')
-        
-    } catch (error:any) {
-        toast.error(error.message + 'while logging out')
-    
-        
+      return await account.deleteSession("current");
+    } catch (error: any) {
+      toast.error(error.message + "while logging out");
     }
   }
 
   async isLoggedIn() {
     try {
-     const data = await this.getCurrentUser();
-     return Boolean(data)
-     
-      
-    } catch (error:any) {
-      toast.error(error.message + 'from isLoggedIn')
-      
+      const data = await this.getCurrentUser();
+      return Boolean(data);
+    } catch (error: any) {
+      toast.error(error.message + "from isLoggedIn");
     }
-    
   }
 
-  async getCurrentUser () {
+  async getCurrentUser() {
     try {
-      return account.get()
-      
-    } catch (error:any) {
-      toast.error('in getcurrent user' + error.message)
-      throw Error(error)
-      
+      return account.get();
+    } catch (error: any) {
+      toast.error("in getcurrent user" + error.message);
+      throw Error(error);
     }
   }
 }
