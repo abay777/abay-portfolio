@@ -19,7 +19,7 @@ import { Guest } from "@/components";
    if(adminStatus) {
     router.push('/admin')
    }
- },[adminStatus])
+ },)
  
 
 
