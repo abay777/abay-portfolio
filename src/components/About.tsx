@@ -14,12 +14,12 @@ const mulish = Mulish({
 export const About: React.FC = () => {
   return (
     <main className="flex md:flex-row flex-col justify-center items-center gap-16 mt-16">
-      <section className="relative w-full">
+      <section className="relative w-full " id="about">
         <Image
           src={sqaure}
           width={401}
           height={393}
-          className="object-contain rounded-3xl  mx-auto md:mx-0"
+          className="object-contain rounded-3xl  px-5 md:mx-0"
           alt="web development "
         />
         <div className="absolute hidden lg:flex -bottom-[2rem] rounded-full right-[3rem] bg-black p-16">

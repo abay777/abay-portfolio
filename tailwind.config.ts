@@ -15,6 +15,7 @@ const config: Config = {
 
     'mx': '1192px',
     // => @media (min-width: 1280px) { ... }
+    
   },
     extend: {
       backgroundImage: {

@@ -10,7 +10,7 @@ const mulish = Mulish({
 
 export const Contact:React.FC = () => {
   return (
-    <section className="flex flex-col justify-center md:justify-start md:items-start items-center gap-10  mt-16">
+    <section className="flex flex-col justify-center md:justify-start md:items-start items-center gap-10  mt-16" id="contact">
         <h1 className={`text-blue-600 ${mulish.className} font-extrabold text-xl `}>Contact</h1>
         <h2 className="font-extrabold text-2xl ">Don&apos;t be shy! Hit me up! 👇</h2>
         <div className="text-center flex flex-col md:flex-row gap-16 pt-5">

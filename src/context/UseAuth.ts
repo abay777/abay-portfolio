@@ -2,11 +2,15 @@ import { useContext } from "react";
 import AuthContext from "./authContext";
 
 
-type Data =()=> {
+export type Data = {
     authStatus:boolean;
     setAuthStatus:(status:boolean)=>void;
+    adminStatus:boolean;
+    setAdminStatus:(status:boolean)=>void;
+    
 }
-export const useAuth:Data = () => {
+type UseAuth = () => Data;
+export const useAuth:UseAuth = () => {
         const data = useContext(AuthContext);
         return data
 }

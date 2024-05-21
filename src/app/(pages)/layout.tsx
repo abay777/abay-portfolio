@@ -20,18 +20,25 @@ const Poppinss = Poppins({
 }) => {
 
   const [authStatus, setAuthStatus] = useState<boolean>(false);
+  const [adminStatus ,setAdminStatus] = useState<boolean>(false)
   const [loader, setLoader] = useState<boolean>(true);
-
+  
   useEffect(() => {
+
+    appwriteService.checkAdmin()
+    .then((status)=>{
+      setAdminStatus(Boolean(status))
+    })
+
       appwriteService.isLoggedIn()
       .then((status)=>{
         setAuthStatus(Boolean(status))
       })
-      .finally(()=>setLoader(false))
+      .finally(()=>setLoader(false))   
       
-  }, []);
+  }, [adminStatus]);
 
-  return <AuthProvider value={{ authStatus, setAuthStatus }}>
+  return <AuthProvider value={{ authStatus, setAuthStatus,adminStatus,setAdminStatus }}>
          {children}
       </AuthProvider>
 
