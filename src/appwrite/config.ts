@@ -1,5 +1,5 @@
 import conf from "@/config/conf";
-import { Client, Account, ID } from "appwrite";
+import { Client, Account, ID, Models, AppwriteException } from "appwrite";
 import React from "react";
 import toast from "react-hot-toast";
 
@@ -24,6 +24,10 @@ export { ID } from "appwrite";
 class AppwriteService {
   async createUserAccount({ email, password, name }: CreateUserAccount) {
     try {
+      const currentUser = await this.isLoggedIn();
+      if(currentUser) {
+        await this.logout()
+      }
       const userAccount = await account.create(
         ID.unique(),
         email,
@@ -41,8 +45,22 @@ class AppwriteService {
     }
   }
 
+  async anonymousUser (){
+    try {
+      const data = account.createAnonymousSession()
+      return data
+    } catch (error:any) {
+      throw Error(error.message + 'this is from anonymous user')
+      
+    }
+  }
+
   async loginUser({ email, password }: LoginUser) {
     try {
+      const currentUser = await this.getCurrentUser;
+      if(Boolean(currentUser)) {
+        await this.logout()
+      }
       return await account.createEmailSession(email, password);
     } catch (error: any) {
       console.log(error);
@@ -61,7 +79,14 @@ class AppwriteService {
   async isLoggedIn() {
     try {
       const data = await this.getCurrentUser();
-      return Boolean(data);
+      if(!data){
+        return Boolean(data);
+
+      }else{
+
+        return Boolean(data);
+      }
+
     } catch (error: any) {
       toast.error(error.message + "from isLoggedIn");
     }
@@ -69,11 +94,41 @@ class AppwriteService {
 
   async getCurrentUser() {
     try {
-      return account.get();
-    } catch (error: any) {
-      toast.error("in getcurrent user" + error.message);
-      throw Error(error);
+      return await account.get();
+    }catch (error: any) {
+      if (error instanceof AppwriteException) {
+        // Handle specific AppwriteException here
+        if (error.code === 401) {
+          // Handle unauthorized access (e.g., user not logged in)
+          return false;
+        }
+      }else{
+        console.error("Error checking admin role:", error.message);
+        throw error; // Re-throw the error to propagate it to the caller
+      }
     }
+  }
+
+  async checkAdmin () {
+    try {
+      const user:Models.User<Models.Preferences> | any  = await this.getCurrentUser()
+      if(user.$id) {
+        const roles = user.labels;
+        if(roles.includes('admin')){
+          return true
+        }else {
+          return false
+        }
+        
+      }
+
+    } 
+      catch (error: any) {
+        throw Error(error.message)
+
+      }
+      
+    
   }
 }
 

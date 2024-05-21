@@ -27,10 +27,8 @@ const Login = () => {
 
       const loggedUser = await appwriteService.loginUser({ email, password });
       toast.success(`succesfully logged`);
-      console.log(loggedUser);
       if (loggedUser) {
         setAuthStatus(true);
-        console.log(authStatus);
 
         // Reset the form fields after submission if needed
         setEmail("");

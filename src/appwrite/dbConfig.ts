@@ -1,22 +1,28 @@
 import {  Databases, ID, Models,Query } from "appwrite";
 import conf from "@/config/conf";
-import { client } from "./config";
+import { appwriteService, client } from "./config";
 export interface CreateDB {
   projectTitle: string;
   projectDescription: string;
   projectLink: string;
-  projectPicture?:File;
+  projectPicture:string;
+  projectGitLink:string;
+  projectTechUsed:string;
+
 }
 
 
 
-const databases = new Databases(client);
+const databases = new Databases(client  );
 
 class AppwriteDbServices {
   async createDb({
     projectTitle,
     projectDescription,
     projectLink,
+    projectGitLink,
+    projectPicture,
+    projectTechUsed
   }: CreateDB) {
 
     try {
@@ -28,6 +34,9 @@ class AppwriteDbServices {
               projectTitle: projectTitle,
               projectDescription: projectDescription,
               projectLink: projectLink,
+              projectGitLink:projectGitLink,
+              projectTechUsed:projectTechUsed,
+              projectPicture:projectPicture
             }
           );
          return response
@@ -39,6 +48,7 @@ class AppwriteDbServices {
   }
   async getData (){
     try {
+       
         const data = await databases.listDocuments(
          conf.appwriteDB_Id,
          conf.appwriteCollection_Id,

@@ -18,7 +18,9 @@ import { Signup } from "@/components/Signup";
 
   return (
    <>
-   <Signup/>
+    <p className=" text-3xl text-center font-bold mx-10 tracking-wide  my-10 "> 
+    currently the signup page has been put off from function as per the owner instruction
+    </p>
    </>
   )
 };
