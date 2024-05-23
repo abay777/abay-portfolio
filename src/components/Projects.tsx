@@ -6,6 +6,7 @@ import { GoLinkExternal } from "react-icons/go";
 import { useAuth } from "@/context/UseAuth";
 import { appwriteService } from "@/appwrite/config";
 
+
 export const Projects: React.FC = () => {
   const {authStatus, setAuthStatus} = useAuth()
   const [dbData, setDbData] = useState<any>([]);
@@ -40,13 +41,13 @@ export const Projects: React.FC = () => {
                         <h1 className=" font-semibold text-base lg:text-xl text-center">
                          {project.projectTitle}
                         </h1>
-                        <p className="m-0 text-gray-500 w-full text-center">{
+                        <p className="m-0 text-gray-500 w-[80%] md:w-full text-center">{
                             project.projectDescription
                         }
                         </p>
-                        <div className="font-bold text-base flex justify-center items-center gap-5">
+                        <div className="flex flex-wrap justify-center gap-4 w-[400px] md:w-full ">
                         {  JSON.parse(project.projectTechUsed).map((tech:any,index:number)=>{
-                          return( <p key={index}>{tech} </p>
+                          return( <p className="font-bold animate-pulse" key={index}>{tech} </p>
                         )})}
                 
                          
@@ -67,7 +68,7 @@ export const Projects: React.FC = () => {
                           width={500}
                           height={500}
                           quality={100}
-                          className="w-full  lg:w-[90%] lg:h-[20rem]  rounded-sm  object-fill  lg:object-cover lg:ml-12 "
+                          className="w-full  lg:w-[40rem] lg:h-[20rem]  rounded-sm  object-fill  lg:object-cover lg:ml-12 "
                         />
                       </div>
              
@@ -75,27 +76,27 @@ export const Projects: React.FC = () => {
                     </section>
 
                 ):(
-                    <section key={index} className="flex justify-center items-start gap-4 mx-10 mt-20 ">
-            <div className="flex-1">
+                    <section key={index} className="flex flex-col lg:flex-row justify-center items-start  mx-10  gap-4">
+            <div className="lg:flex-1 flex items-center justify-center w-full  lg:mx-0">
               <Image
                 src={project.projectPicture}
                 alt="projecttitle"
                 width={500}
                 height={500}
                 quality={100}
-                className="w-full  lg:w-[90%] lg:h-[20rem]  rounded-sm  object-fill  lg:object-cover lg:ml-12 "
+                className="w-full  lg:w-[40rem] lg:h-[20rem]  rounded-sm  object-fill  lg:object-cover lg:mr-12  "
               />
             </div>
-            <div className="flex-1 flex flex-col justify-center items-center gap-10">
+            <div className="flex-1 w-[100%] flex flex-col justify-center items-center gap-10">
               <h1 className=" font-semibold text-xl">
                 {project.projectTitle}
               </h1>
-              <p className="m-0 text-gray-500">
+              <p className="m-0 text-gray-500 w-[80%] md:w-full text-center">
               {project.projectDescription}
               </p>
-              <div className="font-bold text-base flex justify-center items-center gap-5">
+              <div className="flex flex-wrap justify-center gap-4 w-[400px] md:w-full ">
               {  JSON.parse(project.projectTechUsed).map((tech:any,index:number)=>{
-               return( <p key={index} >{tech} </p>
+               return( <p className="font-bold animate-pulse" key={index} >{tech} </p>
                 )})}
                 
               </div>

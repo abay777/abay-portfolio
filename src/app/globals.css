@@ -181,3 +181,33 @@ progress::-moz-progress-bar {
     inset: 0 35px 35px 0;
   }
 }
+
+.scroller {
+display: flex;
+width: 400px;
+justify-content: center;
+align-items: center;
+white-space: wrap;
+gap: 2rem;
+
+}
+
+.scroll {
+
+ animation: scroll 10s alternate infinite ease-in-out;
+ 
+}
+
+
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+  
+}
