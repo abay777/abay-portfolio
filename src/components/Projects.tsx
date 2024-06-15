@@ -63,12 +63,13 @@ export const Projects: React.FC = () => {
                       </div>
                       <div className="lg:flex-1 flex items-center justify-center w-full  lg:mx-0">
                         <Image
+                        unoptimized
                           src={project.projectPicture}
                           alt="projecttitle"
                           width={500}
                           height={500}
                           quality={100}
-                          className="w-full  lg:w-[40rem] lg:h-[20rem]  rounded-sm  object-fill  lg:object-cover lg:ml-12 "
+                          className="w-full  lg:w-[40rem] lg:h-[20rem]  rounded-sm  object-fill  lg:object-scale-down lg:ml-12 "
                         />
                       </div>
              
@@ -79,12 +80,13 @@ export const Projects: React.FC = () => {
                     <section key={index} className="flex flex-col lg:flex-row justify-center items-start  mx-10  gap-4">
             <div className="lg:flex-1 flex items-center justify-center w-full  lg:mx-0">
               <Image
+              unoptimized
                 src={project.projectPicture}
                 alt="projecttitle"
                 width={500}
                 height={500}
                 quality={100}
-                className="w-full  lg:w-[40rem] lg:h-[20rem]  rounded-sm  object-fill  lg:object-cover lg:mr-12  "
+                className="w-full  lg:w-[40rem] lg:h-[20rem]  rounded-sm  object-fill  lg:object-scale-down lg:mr-12  "
               />
             </div>
             <div className="flex-1 w-[100%] flex flex-col justify-center items-center gap-10">
