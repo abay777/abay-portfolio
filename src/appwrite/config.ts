@@ -42,6 +42,7 @@ class AppwriteService {
       );
 
       if (userAccount) {
+        this.GetVerified()
         return { email, password };
       } else {
         return userAccount;
@@ -68,7 +69,6 @@ class AppwriteService {
         await this.logout()
       }
       const result = await account.createEmailSession(email, password);
-      this.GetVerified();
       return result
 
     } catch (error: any) {
