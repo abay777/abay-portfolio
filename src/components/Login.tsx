@@ -33,6 +33,7 @@ const Login = () => {
         // Reset the form fields after submission if needed
         setEmail("");
         setPassword("");
+        router.push("/login/check")
       }
     } catch (error: any) {
       toast.error(error.message, {

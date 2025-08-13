@@ -1,0 +1,210 @@
+[33mcommit efe16052aac7e767c85554eca430685611571a81[m[33m ([m[1;36mHEAD -> [m[1;32mdev[m[33m, [m[1;31morigin/dev[m[33m)[m
+Author: abaysankar <samdash.com@gmail.com>
+Date:   Wed Aug 13 20:39:10 2025 +0530
+
+    updated the texting and some of the auth
+
+[33mcommit 9fd3cd5f9684e111c51164cdfeeaa0e8801f6b4f[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: b9322f0 9077768
+Author: Abay sankar s <123867124+abay777@users.noreply.github.com>
+Date:   Sat Jun 15 13:57:07 2024 +0530
+
+    Merge pull request #10 from abay777/main
+    
+    updated pic and projects
+
+[33mcommit 9077768407d5e568b615b9fe03917252e797c1e9[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: abay777 <abaysankar777@gmailcom>
+Date:   Sat Jun 15 13:55:55 2024 +0530
+
+    updated pic and projects
+
+[33mcommit b9322f0dab7c64e83e6c5a73d65ae7cf8ce4853c[m
+Merge: 2265247 90616a7
+Author: Abay sankar s <123867124+abay777@users.noreply.github.com>
+Date:   Sat Jun 15 13:01:33 2024 +0530
+
+    Merge pull request #9 from abay777/main
+    
+    changed gif name
+
+[33mcommit 90616a7bf3b62fa5a42c8541661a473d3cdf1dba[m
+Author: abay777 <abaysankar777@gmailcom>
+Date:   Sat Jun 15 13:00:25 2024 +0530
+
+    changed gif name
+
+[33mcommit 2265247f65ba21d77720decaf8bdd0d45c6c3913[m
+Author: Abay sankar s <123867124+abay777@users.noreply.github.com>
+Date:   Fri Jun 14 11:21:28 2024 +0530
+
+    Update README.md
+
+[33mcommit 4db267fbf74fd49fbdf6e9afe8cdc3ad706f61fb[m
+Merge: 2f133d0 45d50f2
+Author: Abay sankar s <123867124+abay777@users.noreply.github.com>
+Date:   Thu May 23 14:15:29 2024 +0530
+
+    Merge pull request #8 from abay777/main
+    
+    Main
+
+[33mcommit 45d50f23ad49948fd36a54ee5a5ef1ef5fb993f1[m
+Merge: 9996099 a51d4ef
+Author: abay777 <abaysankar777@gmailcom>
+Date:   Thu May 23 14:13:13 2024 +0530
+
+    Merge branch 'main' of https://github.com/abay777/abay-portfolio
+
+[33mcommit 99960997feee147b2a54d9bb02156b82455dce20[m
+Author: abay777 <abaysankar777@gmailcom>
+Date:   Thu May 23 14:11:19 2024 +0530
+
+    fixed design bug
+
+[33mcommit a51d4eff38bfe42a8a9b8bbf1d9a19e00cfda78f[m
+Merge: 9d15288 2f133d0
+Author: Abay sankar s <123867124+abay777@users.noreply.github.com>
+Date:   Tue May 21 17:28:45 2024 +0530
+
+    Merge pull request #7 from abay777/master
+    
+    build confirmed
+
+[33mcommit 2f133d009a34762e82266d36607e690334005e5d[m
+Merge: 7992492 9d15288
+Author: Abay sankar s <123867124+abay777@users.noreply.github.com>
+Date:   Tue May 21 17:27:12 2024 +0530
+
+    Merge pull request #6 from abay777/main
+    
+    fixed all bugs , added 2 projects
+
+[33mcommit 9d152887bfdefb10c653a4e4ea2b7ead49433116[m
+Author: abay777 <abaysankar777@gmailcom>
+Date:   Tue May 21 17:26:50 2024 +0530
+
+    checked build
+
+[33mcommit 4e6261fd82f8f4adf99a478ff01ba9b7a18c9b6c[m
+Author: abay777 <abaysankar777@gmailcom>
+Date:   Tue May 21 17:23:05 2024 +0530
+
+    fixed all bugs , added 2 projects
+
+[33mcommit 79924927c76d55cb63af9748400bee721a3ebbf4[m
+Merge: fca7f7f 970660c
+Author: Abay sankar s <123867124+abay777@users.noreply.github.com>
+Date:   Sat May 18 13:00:34 2024 +0530
+
+    Merge pull request #5 from abay777/main
+    
+    next config added
+
+[33mcommit 970660c7971792be7fa2fd6bc99fbf839ea02c4a[m
+Author: abay777 <abaysankar777@gmailcom>
+Date:   Sat May 18 12:58:27 2024 +0530
+
+    next config added
+
+[33mcommit fca7f7f8445876bd21a132809576dc6f41444960[m
+Merge: 2ec4fc8 1635b07
+Author: Abay sankar s <123867124+abay777@users.noreply.github.com>
+Date:   Wed May 15 17:33:25 2024 +0530
+
+    Merge pull request #4 from abay777/main
+    
+    removed api
+
+[33mcommit 1635b072ae26b89086f42b51354eb8a155773ada[m
+Author: abay777 <abaysankar777@gmailcom>
+Date:   Wed May 15 17:30:31 2024 +0530
+
+    removed api
+
+[33mcommit 2ec4fc84518abdbcaed8145e29f2ffb052d76edf[m
+Merge: 2adfe74 0269918
+Author: Abay sankar s <123867124+abay777@users.noreply.github.com>
+Date:   Wed May 15 17:11:26 2024 +0530
+
+    Merge pull request #3 from abay777/main
+    
+    removed config file
+
+[33mcommit 02699180dba583b5571ce23ccadd36cb6ce60a2e[m
+Author: abay777 <abaysankar777@gmailcom>
+Date:   Wed May 15 16:58:10 2024 +0530
+
+    removed config file
+
+[33mcommit 2adfe74101aa0c15ea7d44aa03b9ebe93e88a4c3[m
+Merge: c4760d3 3e43d6f
+Author: Abay sankar s <123867124+abay777@users.noreply.github.com>
+Date:   Wed May 15 14:19:45 2024 +0530
+
+    Merge pull request #2 from abay777/main
+    
+    added next config for cors
+
+[33mcommit 3e43d6f9563218439bd86b93d2168d42f7452fc1[m
+Author: abay777 <abaysankar777@gmailcom>
+Date:   Wed May 15 14:18:15 2024 +0530
+
+    added next config for cors
+
+[33mcommit c4760d32b78203949e5450bc11362a2fcc19c17c[m
+Merge: aa45483 a056080
+Author: Abay sankar s <123867124+abay777@users.noreply.github.com>
+Date:   Sat May 11 13:00:39 2024 +0530
+
+    Merge pull request #1 from abay777/main
+    
+    updated with icon
+
+[33mcommit a056080ecf50ec5434167e833dca3d8835c6fb08[m
+Author: abay777 <abaysankar777@gmailcom>
+Date:   Sat May 11 12:59:21 2024 +0530
+
+    updated with icon
+
+[33mcommit aa4548387f54209ad4e5974e60aaf8b2d8a5837c[m
+Author: abay777 <abaysankar777@gmailcom>
+Date:   Fri May 10 19:12:27 2024 +0530
+
+    final build ok
+
+[33mcommit 08b0ff5d831390ee8f3ef464cc026b9b2a9a42e3[m
+Author: abay777 <abaysankar777@gmailcom>
+Date:   Fri May 10 19:06:30 2024 +0530
+
+    again
+
+[33mcommit c13f23ffc66331f65cf717f415c8c026aefb80f8[m
+Author: abay777 <abaysankar777@gmailcom>
+Date:   Fri May 10 18:13:47 2024 +0530
+
+    admin form added
+
+[33mcommit 4ff48eb7ce7a9c5958bca4f82fe8d53ecda3a40b[m
+Author: abay777 <abaysankar777@gmailcom>
+Date:   Fri Apr 26 18:09:06 2024 +0530
+
+    added appwrite
+
+[33mcommit 8503811581bc327fd3def0684e215f25e8df80a9[m
+Author: abay777 <abaysankar777@gmailcom>
+Date:   Mon Apr 22 18:49:36 2024 +0530
+
+    added navbar and arranged layout
+
+[33mcommit 3c9c21fe414c3166808bcd3178a4468f15bcfa7b[m
+Author: abay777 <abaysankar777@gmailcom>
+Date:   Sun Apr 21 18:28:52 2024 +0530
+
+    first part of design completed
+
+[33mcommit 3603ea7828da220c0af1c19cb0566a173e66275e[m
+Author: abay777 <abaysankar777@gmailcom>
+Date:   Fri Apr 19 11:46:00 2024 +0530
+
+    Initial commit from Create Next App

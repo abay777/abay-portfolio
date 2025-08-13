@@ -13,11 +13,17 @@ type LoginUser = {
   email: string;
   password: string;
 };
+
+interface isVerified {
+  userId:string;
+  secret:string;
+}
 export const client = new Client();
 
 const result = client
   .setEndpoint(conf.appwriteURl)
   .setProject(conf.appwriteProject); // Replace with your project ID
+
 export const account = new Account(client);
 export { ID } from "appwrite";
 
@@ -61,7 +67,10 @@ class AppwriteService {
       if(Boolean(currentUser)) {
         await this.logout()
       }
-      return await account.createEmailSession(email, password);
+      const result = await account.createEmailSession(email, password);
+      this.GetVerified();
+      return result
+
     } catch (error: any) {
       console.log(error);
       throw Error(error);
@@ -76,16 +85,26 @@ class AppwriteService {
     }
   }
 
+  async GetVerified() {
+    await account.createVerification(`${conf.baseUrl}/login/verify`)
+  }
+
+  async isVerified({userId,secret}:isVerified){
+    try {
+      const result = await account.updateVerification(userId,secret)
+      console.log(result,'isVerified')
+      return result
+    } catch (error) {
+      console.error(error,"from the verfiication")
+      return false
+    }
+
+  }
+
   async isLoggedIn() {
     try {
       const data = await this.getCurrentUser();
-      if(!data){
-        return Boolean(data);
-
-      }else{
-
-        return Boolean(data);
-      }
+      return Boolean(data)
 
     } catch (error: any) {
       toast.error(error.message + "from isLoggedIn");
