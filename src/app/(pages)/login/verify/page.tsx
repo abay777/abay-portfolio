@@ -1,7 +1,7 @@
 'use client'
 import { appwriteService } from "@/appwrite/config";
 import { useParams, useSearchParams, useRouter } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 
 const Verify = () => {
     const QueryPrams = useSearchParams();
@@ -127,4 +127,13 @@ const Verify = () => {
     )
 };
 
-export default Verify;
+function VerifyPage (){
+    return(
+        <Suspense fallback={<div>loading...</div>}>
+            <Verify/>
+        </Suspense>
+    )
+}
+export default VerifyPage
+
+
