@@ -127,6 +127,7 @@ const Verify = () => {
     )
 };
 
+<<<<<<< HEAD
  const VerifyPage = ()=> {
     return(
         <Suspense fallback={<div>loading...</div>}>
@@ -138,3 +139,15 @@ const Verify = () => {
 }
 
 export default VerifyPage;
+=======
+function VerifyPage (){
+    return(
+        <Suspense fallback={<div>loading...</div>}>
+            <Verify/>
+        </Suspense>
+    )
+}
+export default VerifyPage
+
+
+>>>>>>> dev

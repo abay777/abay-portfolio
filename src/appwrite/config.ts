@@ -69,6 +69,8 @@ class AppwriteService {
         await this.logout()
       }
       const result = await account.createEmailSession(email, password);
+
+
       return result
 
     } catch (error: any) {

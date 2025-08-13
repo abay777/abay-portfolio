@@ -10,6 +10,7 @@ Abay Sankar's Portfolio is a comprehensive web application designed to showcase 
 - **Tailwind CSS**: For utility-first CSS styling.
 - **TypeScript**: For type safety and scalability.
 - **ESLint**: For code quality and consistency.
+- - **react bits**: For animation and bootstrapping components.
 
 ## Features
 
