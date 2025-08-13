@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import { Mulish } from "next/font/google";
 import { CiMenuBurger } from "react-icons/ci";
 import { MdOutlineClose } from "react-icons/md";
+import Link from "next/link";
+import { appwriteService } from "@/appwrite/config";
+import { useAuth } from "@/context/UseAuth";
+import AuthContext from "@/context/authContext";
 const mulish = Mulish({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
@@ -9,6 +13,8 @@ const mulish = Mulish({
 
 export const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const{authStatus} = useAuth();
+
 
   return (
     <nav className="">
@@ -18,21 +24,33 @@ export const Header: React.FC = () => {
           <ul
             className={`flex gap-4 justify-center items-center font-light  ${mulish.className}`}
           >
-            <a href="#home">
-            <li className="hover:animate-pulse hover:text-[#147efb]">Home</li></a>
-            <a href="#about">
+            <Link href="#home">
+            <li className="hover:animate-pulse hover:text-[#147efb]">Home</li></Link>
+            <Link href="#about">
               <li className="hover:animate-pulse hover:text-[#147efb]">About</li>
-              </a>
-              <a href="#projects">
+              </Link>
+              <Link href="#projects">
                 <li className="hover:animate-pulse hover:text-[#147efb]">
                   Projects
                 </li>
-              </a>
-              <a href="#contact">
+              </Link>
+              <Link href="#contact">
                 <li className="hover:animate-pulse hover:text-[#147efb]">
                   Contact
                 </li>
-              </a>
+              </Link>
+                {authStatus?(
+                  <Link href="/logout">
+                <li className="hover:animate-pulse hover:text-[#147efb]" >
+                  Logout
+                </li>
+              </Link>
+                ):( <Link href="/login">
+                <li className="hover:animate-pulse hover:text-[#147efb]">
+                  Login
+                </li>
+              </Link>)
+              }
           </ul>
         </div>
         {/* mobile nav */}
@@ -42,7 +60,7 @@ export const Header: React.FC = () => {
         className={`z-30 md:hidden visible  transition-all ease-in-out duration-300   ${
           isMenuOpen
             ? "bg-gray-600 fixed top-0 bottom-0 left-0 right-0"
-            : "bg-black"
+            : "bg-transparent"
         }`}
       >
         <div
@@ -64,24 +82,24 @@ export const Header: React.FC = () => {
           <ul
             className={`flex flex-col gap-16  justify-center items-center font-light text-5xl  ${mulish.className}`}
           >
-            <a href="#home" onClick={()=>{setIsMenuOpen(false)}}>
+            <Link href="#home" onClick={()=>{setIsMenuOpen(false)}}>
               <li  className="hover:animate-pulse hover:text-[#147efb]">Home</li>
-            </a>
-            <a href="#about" onClick={()=>{setIsMenuOpen(false)}}>
+            </Link>
+            <Link href="#about" onClick={()=>{setIsMenuOpen(false)}}>
               <li className="hover:animate-pulse hover:text-[#147efb]">
                 About
               </li>
-            </a>
-            <a href="#projects" onClick={()=>{setIsMenuOpen(false)}}>
+            </Link>
+            <Link href="#projects" onClick={()=>{setIsMenuOpen(false)}}>
               <li className="hover:animate-pulse hover:text-[#147efb]">
                 Projects
               </li>
-            </a>
-            <a href="#contact" onClick={()=>{setIsMenuOpen(false)}}>
+            </Link>
+            <Link href="#contact" onClick={()=>{setIsMenuOpen(false)}}>
             <li className="hover:animate-pulse hover:text-[#147efb]">
               Contact
             </li>
-            </a>
+            </Link>
           </ul>
         </div>
       </section>

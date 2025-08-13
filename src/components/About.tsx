@@ -2,56 +2,46 @@ import Image from "next/image";
 import React from "react";
 import sqaure from "../../public/darkModeDevSymbol.avif";
 import circle from "@/../../public/web-developer-circle.svg";
-import devIcon from "@/../../public/dev icon.png";
+import devIcon from "@/../../public/developer.gif";
 import { Mulish } from "next/font/google";
 
 const mulish = Mulish({
-    subsets: ["latin"],
-    weight: ["400", "600", "700"],
-  });
-  
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+});
+
 
 export const About: React.FC = () => {
   return (
-    <main className="flex md:flex-row flex-col justify-center items-center gap-16 mt-16">
-      <section className="relative w-full " id="about">
-        <Image
-          src={sqaure}
-          width={401}
-          height={393}
-          className="object-contain rounded-3xl  px-5 md:mx-0"
-          alt="web development "
-        />
-        <div className="absolute hidden lg:flex -bottom-[2rem] rounded-full right-[3rem] bg-black p-16">
+    <main className="flex md:flex-col flex-col justify-center items-center gap-5 mt-16">
+      <div className="flex flex-col justify-center items-center gap-4">
 
-            <Image
+      <h4 className="text-blue-600 font-bold text-3xl  text-center m-0 p-0 ">About Me</h4>
+      {/* <h4 className="text-xl font-bold text-center mx-auto md:mx-0 m-0 p-0">FullStack Developer based india. 📍</h4> */}
+      </div>
+      <main className="flex flex-col md:flex-row justify-center items-center md:items-start m-0 p-0">
+        <section className="relative w-[80%]  h-full " id="about">
+          <Image
             src={devIcon}
-            width={70}
-            height={100}
+            width={401}
+            height={393}
+            className="object-contain rounded-3xl  w-full h-[80%] px-5 md:mx-0"
             alt="web development "
-            />
-              <Image
-            src={circle}
-            width={300}
-            height={100}
-            className="absolute bottom-0 right-[.2rem] invert animate-spin "
-            alt="web development "
-            />
+          />
+        </section >
+        <section className="w-full flex flex-col justify-self-end gap-5 " >
 
-        </div>
-      </section >
-      <section className="w-full flex flex-col justify-self-end gap-5 " >
-        <h1 className="text-blue-600 font-bold text-xl  text-center  md:text-justify">About Me</h1>
-        <h2 className="text-xl font-bold w-8/12 text-center md:text-justify mx-auto md:mx-0"> Front-end React Developer based in kerala, India. 📍</h2>
-        <p className={`text-gray-600 ${mulish.className} mx-auto  md:mx-0  text-center md:text-justify w-10/12 `}> Hey, my name is Abay, and I&apos;m a Frontend Developer. My passion is to create and develop a clean UI/UX for my users.</p>
-        <p className={`text-gray-600 ${mulish.className} mx-auto md:mx-0 text-center md:text-left w-10/12 `} >
-          Current Tech Stack is Next js/React js with server side rendering
-          experience incorporated with TypeScript,Tailwind
-          
-          <br />
-          hands on experience with Appwrite , MongoDB
-        </p>
-      </section>
+          <p className={`text-gray-600 ${mulish.className} mx-auto  md:mx-0  text-center md:text-justify w-10/12 `}>Hi, I’m Abay — a passionate Full-Stack Developer with a focus on building clean, intuitive UI/UX and robust, scalable backend systems. I thrive on turning ideas into seamless, high-performance web applications that deliver real value to users.</p>
+          <p className={`text-gray-600 ${mulish.className} mx-auto md:mx-0 text-center md:text-left w-10/12 `} >
+            My core tech stack is MERN (MongoDB, Express.js, React, Node.js) enhanced with Next.js for server-side rendering, TypeScript for type-safe development, and modern tools like Firebase and Appwrite for rapid, reliable backend solutions.
+
+            I bring hands-on experience in database design and management (MongoDB), authentication & authorization systems, API integration, and performance optimization. I aim to craft maintainable, efficient code that not only works but works well at scale.
+
+            <br />
+            hands on experience with Appwrite , MongoDB
+          </p>
+        </section>
+      </main>
     </main>
   );
 };
