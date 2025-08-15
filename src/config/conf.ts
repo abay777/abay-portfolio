@@ -10,8 +10,10 @@
     appwriteProject:String(process.env.NEXT_PUBLIC_APPWRITE_PROJECT_ID),
     appwriteDB_Id:String(process.env.NEXT_PUBLIC_APPWRITE_DB_PROJECT_ID),
     appwriteCollection_Id:String(process.env.NEXT_PUBLIC_APPWRITE_COLLECTION_ID),
-    baseUrl:String(process.env.NEXT_PUBLIC_BASE_URI)
+    baseUrl:String(process.env.NEXT_PUBLIC_BASE_URI),
+    appwirte_Bucket_Id:String(process.env.NEXT_PUBLIC_APPWRITE_BUCKET_ID)
 } 
+
 
 
 

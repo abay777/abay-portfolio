@@ -1,5 +1,5 @@
 import { appwriteService } from "@/appwrite/config";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import toast, { Toaster } from "react-hot-toast";
 import { useAuth } from "@/context/UseAuth";
@@ -8,7 +8,9 @@ const Login = () => {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const {authStatus ,setAuthStatus  } = useAuth();
+  const {authStatus ,setAuthStatus ,adminStatus } = useAuth();
+  const [loading,setLoading] = useState<boolean>(false)
+  
 
   const handleUsernameChange = (e: React.FormEvent<HTMLInputElement>) => {
     setEmail(e.currentTarget.value);
@@ -20,6 +22,7 @@ const Login = () => {
 
   const handleSubmit = async () => {
     try {
+      setLoading(true)
       if (!email || !password) {
         toast.error("empty password or email");
         return;
@@ -33,18 +36,34 @@ const Login = () => {
         // Reset the form fields after submission if needed
         setEmail("");
         setPassword("");
-
-        router.push('/')
-
+      
+      
       }
     } catch (error: any) {
       toast.error(error.message, {
-        position: "bottom-center",
+        position: "bottom-center", 
         duration: 2000,
-      });
+      })
+    }finally{
+      setLoading(false)
     }
   };
 
+   useEffect(() => {
+    console.log(adminStatus,authStatus,"status checl");
+    
+    if (adminStatus) {
+      router.push("/admin");
+    } else if (authStatus) {
+      router.push("/");
+    }
+  }, [adminStatus, authStatus, router,loading]);
+
+  if(loading){
+    return(
+           <div className="loader mx-auto mt-20 "></div>
+    )
+  }
   return (
     <div className="w-full max-w-xs mx-auto mt-14">
       <form className="bg-black shadow-md rounded px-8 pt-6 pb-8 mb-4">

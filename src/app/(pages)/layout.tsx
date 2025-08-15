@@ -36,7 +36,7 @@ const Poppinss = Poppins({
       })
       .finally(()=>setLoader(false))   
       
-  }, [adminStatus]);
+  }, [adminStatus,authStatus]);
 
   return <AuthProvider value={{ authStatus, setAuthStatus,adminStatus,setAdminStatus }}>
          {children}

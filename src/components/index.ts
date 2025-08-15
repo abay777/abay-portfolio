@@ -5,5 +5,5 @@ import { Header } from "./Header";
 import { Home1 } from "./Home1";
 import { Projects } from "./Projects";
 import { AdminForm } from "./AdminForm";
-import { Guest } from "./Guest";
-export {Hero, About, Contact, Header,Home1, Projects, AdminForm, Guest}
+
+export {Hero, About, Contact, Header,Home1, Projects, AdminForm}

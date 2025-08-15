@@ -1,5 +1,5 @@
 import conf from "@/config/conf";
-import { Client, Account, ID, Models, AppwriteException } from "appwrite";
+import { Client, Account, ID, Models, AppwriteException ,Storage} from "appwrite";
 import React from "react";
 import toast from "react-hot-toast";
 
@@ -25,6 +25,8 @@ const result = client
   .setProject(conf.appwriteProject); // Replace with your project ID
 
 export const account = new Account(client);
+
+
 export { ID } from "appwrite";
 
 class AppwriteService {
@@ -52,19 +54,10 @@ class AppwriteService {
     }
   }
 
-  async anonymousUser (){
-    try {
-      const data = account.createAnonymousSession()
-      return data
-    } catch (error:any) {
-      throw Error(error.message + 'this is from anonymous user')
-      
-    }
-  }
-
+ 
   async loginUser({ email, password }: LoginUser) {
     try {
-      const currentUser = await this.getCurrentUser;
+      const currentUser = await this.getCurrentUser();
       if(Boolean(currentUser)) {
         await this.logout()
       }
@@ -81,7 +74,12 @@ class AppwriteService {
 
   async logout() {
     try {
-      return await account.deleteSession("current");
+      console.log("runing logout")
+      const currentUser = await this.getCurrentUser();
+      if(Boolean(currentUser)){
+        return await account.deleteSession("current");
+      }
+      
     } catch (error: any) {
       toast.error(error.message + "while logging out");
     }
